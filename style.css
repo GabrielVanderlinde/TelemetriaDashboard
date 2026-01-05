@@ -11,9 +11,10 @@ body {
 }
 
 /*--LAYOUT GRID*/
-.painel-grid{
+.painel-grid {
     display: grid;
-    height: 100vh; /* Força a altura ser 100% da tela */
+    height: 100vh;
+    /* Força a altura ser 100% da tela */
 
     /*Definindo as Colunas (Largura)*/
     /*Coluna 1: 250px fixos (Menu)*/
@@ -32,17 +33,95 @@ body {
 
     /*COonexão de Classes HTML no Mapa*/
 
-    .barra-lateral{
+    .barra-lateral {
         grid-area: menu;
-        background-color: #2c3e50;
+        background-color: #1a1a2e;
+        color: #a0a0a0;
+
+        /* Flexbox para organizar verticalmente*/
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+        border-right: 1px solid #2c2c44;
     }
 
-    .cabecalho{
+    /* 1. Estilo do Logotipo*/
+    .Logo h2 {
+        color: #fff;
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+    }
+
+    .Logo span {
+        font-size: 0.8rem;
+        /* Ligeramente Transparente */
+        opacity: 0.7;
+
+    }
+
+    /* 2. Estilo da Lista (Tirar as bolinhas)*/
+    .menu-nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        /* Espaço entre os botões */
+        gap: 10px;
+    }
+
+    /*3 Esilo dos Links (Os Botões) */
+    .menu-nav a,
+    .menu-rodape a {
+        text-decoration: none;
+        /* Cor do texto normal */
+        color: #a0a0a0;
+        /* Ocupa a largura toda disponível */
+        display: block;
+        /* Área clicável maior */
+        padding: 12px 15px;
+        /* Cantos arredondados */
+        border-radius: 8px;
+        font-weight: 500;
+        /* Suaviza a animação de cor */
+        transition: all 0.3s;
+    }
+
+    /* Efeito Hover (Quando passa o mouse por cima) */
+    /* Fundo claro transparente */
+    .menu-nav a:hover,
+    .menu-rodape a:hover {
+        /* Fundo claro transparente */
+        background-color: rgba(255, 255, 255, 0.1);
+        color: white;
+        /* Pequeno movimento para a direita */
+        padding-left: 20px;
+    }
+
+    /* Item Ativo (A página atual) */
+    .menu-nav a.ativo {
+        /* Vermelho/Rosa de destaque */
+        background-color: #e94560;
+        color: white;
+        /* Brilho suave */
+        box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+    }
+
+    /* 4. Rodapé do Menu (Empurrar para baixo) */
+    .menu-rodape {
+        margin-top: auto;
+        border-top: 1px solid #2c2c44;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cabecalho {
         grid-area: topo;
         background-color: #e67e22;
     }
 
-    .conteudo-principal{
+    .conteudo-principal {
         grid-area: principal;
         background-color: #ecf0f1;
         color: #333;
