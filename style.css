@@ -107,7 +107,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0px 30px;
     color: white;
 }
 
@@ -147,14 +147,11 @@ body {
     box-shadow: 0 0 10px #2ecc71;
 }
 
-.avatar-perfil {
-    width: 40px;
-    height: 40px;
-    background-color: #e94560;
-    border-radius: 50%;
+.avatar-perfil img {
+    max-width: 50px;
+    height: auto;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    cursor: pointer;
 }
