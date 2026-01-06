@@ -155,3 +155,133 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Cabeçalho interno do Main*/
+.dashboard-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Empurra os cards para baixo*/
+    margin-bottom: 25px;
+}
+
+.dashboard-topo h2 {
+    font-size: 1.5rem;
+    color: #1a1a2e;
+}
+
+.dashboard-topo span {
+    font-size: 0.9rem;
+    color: #666;
+    background: white;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+/* --- GRID DOS CARDS*/
+.grid-cards {
+    display: grid;
+    /* A MÁGICA: Encaixa quantos couberem, mínimo 260px de largura */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Espaço entre os cards */
+    gap: 20px;
+}
+
+/* Design do Card */
+.card {
+    background: white;
+    padding: 20px;
+    /*Arredonda Cantos*/
+    border-radius: 12px;
+    /*Sombra Leve*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+    /* Para alinhar conteúdo interno*/
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /*Borda Colorida na Esquerda*/
+    border-left: 6px solid #ccc;
+    /*Animação Suave*/
+    transition: transform 0.2s;
+
+}
+
+.card:hover {
+    /*Sobe um pouco ao passar o Mouse*/
+    transform: translateY(-5px);
+}
+
+/* Conteúdo do Card */
+.card-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-titulo h3 {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card-valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a2e;
+}
+
+.card-info {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* --- CORES DOS ESTADOS (As bordas laterais) --- */
+
+/* Normal - Verde */
+.status-ok {
+    border-left-color: #2ecc71;
+}
+
+.status-ok .badge {
+    color: #2ecc71;
+    background: #eafaf1;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Atenção - Amarelo */
+.status-atencao {
+    border-left-color: #f1c40f;
+}
+
+.status-atencao .badge {
+    color: #f1c40f;
+    background: #fcf3cf;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Alerta - Vermelho */
+.status-alerta {
+    border-left-color: #e74c3c;
+}
+
+.status-alerta .badge {
+    color: #e74c3c;
+    background: #fdecea;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Offline - Cinza */
+.status-offline {
+    border-left-color: #95a5a6;
+    /* Deixa o card meio apagado */
+    opacity: 0.7;
+}
