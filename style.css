@@ -35,7 +35,6 @@ body {
     border-right: 1px solid #2c2c44;
 }
 
-/* --- CORREÇÃO AQUI: .Logo virou .logo (minúsculo) --- */
 .logo h2 {
     color: #fff;
     font-size: 1.25rem;
@@ -178,6 +177,27 @@ body {
     border-radius: 5px;
 }
 
+/* --- BARRA DE PESQUISA ---*/
+.barra-pesquisa {
+    margin-bottom: 20px;
+}
+
+.campo-pesquisa input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+/* --- GRID DOS CARDS*/
+.grid-cards {
+    display: grid;
+    /* A MÁGICA: Encaixa quantos couberem, mínimo 260px de largura */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Espaço entre os cards */
+    gap: 20px;
+}
 /* --- GRID DOS CARDS*/
 .grid-cards {
     display: grid;
