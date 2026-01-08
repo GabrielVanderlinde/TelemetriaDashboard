@@ -12,6 +12,7 @@ if (inputPesquisa) {
 
 async function buscarDadosPython(cidade) {
     try {
+
         const resposta = await fetch(`http://127.0.0.1:5000/consultar?cidade=${cidade}`);
         const dados = await resposta.json();
 

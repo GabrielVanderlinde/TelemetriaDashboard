@@ -208,7 +208,7 @@ body {
     margin: 20px 0;
     /* Espaço em cima e embaixo (área vermelha) */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #E63946;
+    border-left: 5px solid #16213e;
     /* Faixa vermelha para combinar com o tema */
     display: flex;
     justify-content: space-between;
