@@ -37,7 +37,7 @@ function mostrarCard(dados) {
     document.getElementById('card-clima').style.display = 'flex';
 }
 
-// --- SISTEMA DE ABAS (TABS) ---
+// --- SISTEMA DE ABAS ---
 
 // 1. Pegando os elementos do HTML pelo ID
 const btnGeral = document.getElementById('btn-geral');
